@@ -38,7 +38,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <Toaster />
+            <Toaster position="top-center" />
             {children}
           </ThemeProvider>
         </SolanaProvider>

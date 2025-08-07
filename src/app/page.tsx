@@ -16,6 +16,7 @@ import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { ModeToggle } from "@/components/theme-changer";
 import { CopyButton } from "@/components/ui/shadcn-io/copy-button";
+import { toast } from "sonner";
 
 export default function Home() {
   const wallet = useWallet();
@@ -37,6 +38,9 @@ export default function Home() {
     if (wallet.publicKey) {
       const connection = new Connection(clusterApiUrl("devnet"), "confirmed");
       await connection.requestAirdrop(wallet.publicKey, 1e9); // 1 SOL
+    }
+    else{
+      toast.warning("Please connect your wallet")
     }
   };
 
