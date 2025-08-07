@@ -17,6 +17,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
+import { toast } from "sonner";
 
 export default function SendSol() {
   const [signature, setSignature] = useState("");
@@ -46,6 +47,7 @@ export default function SendSol() {
     transaction.add(sendSolInstruction);
     const sig = await sendTransaction(transaction, connection);
     setSignature(sig);
+    toast("Transaction successful");
   }
 
   return (
