@@ -90,7 +90,7 @@ export default function SendSol() {
               </Button>
             </form>
           ) : (
-            <div className="text-center text-red-600 font-medium">
+            <div className="text-center text-green-500 font-medium">
               Please connect your wallet.
             </div>
           )}

@@ -79,7 +79,7 @@ export default function Home() {
                 </div>
               </div>
             ) : (
-              <p className="text-sm text-destructive">Wallet not connected.</p>
+              <p className="text-sm text-green-500">Wallet not connected.</p>
             )}
           </CardContent>
         </Card>
