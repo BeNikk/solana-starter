@@ -17,6 +17,7 @@ import { Badge } from "@/components/ui/badge";
 import { ModeToggle } from "@/components/theme-changer";
 import { CopyButton } from "@/components/ui/shadcn-io/copy-button";
 import { toast } from "sonner";
+import Link from "next/link";
 
 export default function Home() {
   const wallet = useWallet();
@@ -49,6 +50,11 @@ export default function Home() {
       {/* Header bar with ModeToggle */}
       <div className="flex justify-end max-w-3xl mx-auto mb-4">
         <ModeToggle />
+        <Link href={'/spl'} className="mx-4">
+        <Button>
+          Create SPL Tokens
+        </Button>
+        </Link>
       </div>
 
       <div className="max-w-3xl mx-auto space-y-8">
